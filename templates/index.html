@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iago Furtado - Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Iago Furtado</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <section id="about">
+            <h2 class="mb-4">About Me</h2>
+            <p>
+                I am Iago Furtado, a dedicated Developer with a strong foundation in software development and data analysis. 
+                Currently pursuing a Computer Programming Co-op Diploma Program at Georgian College, Barrie, Ontario, Canada. 
+                I hold an MBA in Business Intelligence And Big Data from University Cruzeiro do Sul, Brazil, and a Bachelor's degree 
+                in Economics from the Federal University of Paraíba, Brazil, where I was honored with the Best Student Award in 2018.
+                Fluent in Brazilian Portuguese, proficient in English, and Spanish. I am a quick learner with a passion for continuous 
+                improvement and knowledge sharing.
+            </p>
+        </section>
+
+        <section id="skills" class="mt-5">
+            <h2 class="mb-4">Skills</h2>
+            <ul>
+                <li>Java</li>
+                <li>C#</li>
+                <li>Swift</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>.NET</li>
+                <li>R</li>
+            </ul>
+            <p>
+                Proficient in SQL database systems including MySQL, MS SQL Server, and PostgreSQL. Skilled in database design, 
+                optimization, and writing complex queries. Familiar with GitHub for version control, Visual Studio Code for coding, 
+                and Docker for managing applications. Competent in both Linux and Windows operating systems for system tasks and 
+                deploying software. Proficient in Microsoft Office Suite, especially Excel for data analysis and VBA scripting.
+            </p>
+        </section>
+
+        <section id="experience" class="mt-5">
+            <h2 class="mb-4">Experience</h2>
+            <h3>Junior Technical Analyst, Co-op</h3>
+            <p>
+                Winter 2023 / Winter 2024 - Present<br>
+                Ontario Ministry of Transportation OPS, Toronto ON
+            </p>
+            <ul>
+                <li>Collaborated with the Data Quality team to write SQL queries for bug extraction, enhancing data quality and analysis processes.</li>
+                <li>Developed and implemented SQL procedures to efficiently extract and consolidate data from Driver's Licenses, streamlining information retrieval.</li>
+                <li>Created SQL Server functions to facilitate advanced data analysis by enabling the extraction of next, previous, first, and last data points, improving the team's analytical capabilities.</li>
+                <li>Participated in developing a Python-based chatbot using Streamlit, integrated with OpenAI ChatGPT. Enhanced user interaction and information retrieval processes by leveraging AI prompts generated from the dataset.</li>
+                <li>Contributed to the development of a Microsoft-based application for a Hackathon organized by Microsoft and the Ontario Public Service (OPS), demonstrating innovation and teamwork.</li>
+            </ul>
+
+            <h3>Data Analyst</h3>
+            <p>
+                2019 - 2022<br>
+                Urban Cleaning Authority, João Pessoa, PB. Brazil
+            </p>
+            <ul>
+                <li>Proficiently extracted, transformed, and loaded data using Excel (VBA) and Power BI tools to support data analysis and reporting functions.</li>
+                <li>Significantly improved data accessibility by transitioning from a one-day processing time to an instant online access system, enhancing operational efficiency.</li>
+            </ul>
+
+            <h3>Volunteer Experience: Junior Assistant of the Statistics and Econometrics Course</h3>
+            <p>
+                2017 - 2018<br>
+                Federal University of Paraíba, João Pessoa, PB. Brazil
+            </p>
+            <ul>
+                <li>Assisted fellow students in overcoming challenges related to course materials, providing support in a mentorship capacity.</li>
+                <li>Conducted in-depth time series forecasting using statistical techniques, including linear regression, moving averages, Autoregressive Vectors (VAR), and ARIMA, employing software tools such as RStudio, Excel, and PowerBI.</li>
+            </ul>
+
+            <h3>Achievements</h3>
+            <ul>
+                <li>Best Student of the Economics 2018 Award</li>
+                <li>Runner-Up, Microsoft and Ontario Public Service (OPS) Hackathon 2023 and 2024</li>
+                <li>Consistently named to the Best Student List in the Computing Programming course at Georgian College for 4 consecutive terms</li>
+            </ul>
+        </section>
+    </div>
+
+    <section id="projects" class="bg-light mt-5 py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">Description of project 1</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">Description of project 2</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">Description of project 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 4</h5>
+                            <p class="card-text">Description of project 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="mt-5">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <!-- Your contact form or details go here -->
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
