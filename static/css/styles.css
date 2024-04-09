@@ -1,0 +1,45 @@
+/* Additional CSS for circular photo */
+.profile-photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 70%;
+    object-fit: cover;
+    margin: 80px auto 20px auto;
+    /* Center the photo */
+    display: block;
+}
+
+/* Additional CSS for centered text and logos */
+.centered {
+    text-align: center;
+}
+
+.logo {
+    margin: 0 10px;
+    /* Add spacing between logos */
+}
+
+nav {
+    margin-bottom: 100px;
+}
+
+/* Additional CSS for back-to-top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* Ensure it's above other elements */
+    display: none;
+    /* Initially hidden */
+}
+
+.navbar-nav .nav-link.active {
+    color: red; /* Change the color as desired */
+    font-weight: bold; /* Apply other styles as desired */
+}
+
+footer{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iago Furtado - Portfolio</title>
+    <title >Iago Furtado - Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Iago Furtado</a>
+            <a class="navbar-brand" href="#" onclick="scrollToTop()">Iago Furtado</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,6 +26,16 @@
         </div>
     </nav>
 
+    <div class="centered">
+        <img src="../static/images/photo.jpeg" alt="Profile Photo" class="profile-photo">
+        <h1 class="mb-2">Iago Furtado</h1>
+        <div>
+            <a href="https://github.com/iago-furtado" target="_blank" class="logo"><img src="../static/images/github (1).png" alt="GitHub Logo"></a>
+            <a href="https://linkedin.com/in/iago-furtado/" target="_blank" class="logo"><img src="../static/images/linkedin.png" alt="LinkedIn Logo"></a>
+            <a href="mailto:iago.rhf@outlook.com" class="logo"><img src="../static/images/outlook.png" alt="Email Icon"></a>
+        </div>
+    </div>
+    
     <div class="container mt-5">
         <section id="about">
             <h2 class="mb-4">About Me</h2>
@@ -150,9 +160,40 @@
     <section id="contact" class="mt-5">
         <div class="container">
             <h2 class="text-center">Contact</h2>
-            <!-- Your contact form or details go here -->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
+
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 Iago Furtado. All rights reserved.</span>
+        </div>
+    </footer>
+
+    
+    
+
+    <!-- Back to top button -->
+    <button class="btn btn-primary back-to-top" onclick="scrollToTop()" id="backToTopBtn">Back to Top</button>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -163,11 +204,56 @@
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = document.querySelector('nav').offsetHeight + 20; // Adjust this value as needed
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: targetPosition - offset,
                     behavior: 'smooth'
                 });
             });
         });
+    
+        // Highlight navigation links when their associated sections are in view
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+    
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+    
+                if (pageYOffset >= sectionTop - 50 && pageYOffset < sectionTop + sectionHeight - 50) {
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${section.id}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+    
+        // Function to scroll back to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    
+        // Show/hide back to top button based on scroll position
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
     </script>
+    
 </body>
 </html>
